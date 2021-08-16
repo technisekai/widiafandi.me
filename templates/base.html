@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Bootstrap CSS -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+		<!-- Bootstrap JS-->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+		<!-- prism CSS -->
+		<link href="{{ url_for('static', filename='prism/css/prism.css') }}" rel="stylesheet" />
+		<!-- Custom CSS -->
+		<style>			
+			@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+			body {
+				color: #464660;
+				font-family: 'PT Sans';
+				font-size: 20px;
+			}
+			.bg-cyan {
+				background-color: #95E1D3;
+			}
+			.bg-yellow {
+				background-color: #FCE38A;
+			}
+			.bg-red {
+				background-color: #FF75A0;
+			}
+			.bg-green {
+				background-color: #F9F9F9;
+			}
+			.txt-cyan {
+				color: #95E1D3;
+			}
+			.txt-red {
+				color: #FF75A0;
+			}
+			.title {
+				font-size: 300%;
+			}
+			.ball {
+			  position: absolute;
+			  opacity: 0.7;
+			}
+			.rounded-corners {
+			  border-radius: 35px;
+			}
+		</style>
+		<title>{% if judul %} {{ judul }} | {% endif %}Widi Afandi</title>
+	</head>
+	<body {% if not judul in nav_link %} class="bg-green" {% endif %}>
+		<div class="container-fl pe-4 ps-4">
+			<script src="{{ url_for('static', filename='prism/js/prism.js') }}"></script>
+			<div class="container">
+				<!-- navbar -->
+				<nav class="navbar navbar-expand-lg fixed-top navbar-light shadow-sm bg-white">
+					<div class="container">
+						<a class="navbar-brand" href="{{ url_for('home') }}">
+							<img src="{{ url_for('static', filename='assets/img/logo.png') }}" alt="" width="45" height="45">
+						</a>
+						<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+							<ul class="navbar-nav inline">
+								{% for menu in nav_link %}
+								<li class="nav-item me-4">
+									<a class="nav-link fs-5 {% if judul == menu %} fw-bold {% endif %}" href="{{ url_for(menu.lower()) }}">{{ menu }}</a>
+								</li>
+								{% endfor %}
+							</ul>
+						</div>
+					</div>
+				</nav>
+			</div>
+			<!-- content -->
+			{% block content %} {% endblock %}
+		</div>
+		<div class="container-fl p-5 text-center bg-yellow text-center fs-6 mt-5">
+			@2021 | <b>Widi Afandi</b><br>
+			Powered by <b>Flask & Bootstrap</b>
+		</div>
+	</body>
+</html>
