@@ -33,7 +33,8 @@ def artikel():
 @app.route('/artikel/<path:path>.html')
 def page(path):
     page = pages.get_or_404(path)
-    path = path.replace('-', ' ')
+    path = path.replace('_', ' ')
+    path = path.title()
     return render_template('page.html', nav_link = nav_link, page=page, judul=path)
 
 if __name__ == '__main__':
