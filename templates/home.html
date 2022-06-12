@@ -44,8 +44,8 @@
 			);
 			});
 		</script>
-		<div class="container vh-100 d-flex align-items-center justify-content-center text-center flex-column">
-			<h1 class="text-center title fw-bold">Halo, saya Widi Afandi</h1>
+		<div class="container vh-100 d-flex align-items-center justify-content-center text-center flex-column pe-4 ps-4">
+			<h1 class="text-center title fw-bold">Hello, I'm Widi Afandi</h1>
 			<span class="text-center">Cyber Security | Machine Learning | Linux Enthusiasts</span>
 			<span class="text-center fs-6 fw-bold mt-4 mb-2">Sosial Media</span>
 			<div class="row row-cols-3 row-cols-sm-3 g-4">
@@ -67,45 +67,74 @@
 			</div>
 		</div>
 		<!-- Ringkasan -->
-		<div class="container bg-red p-5 text-center rounded-corners">
-			<h3 class="fw-bold">Perkenalkan</h3>
-			<p class="mt-4 text-start">
-				Saya Widi Afandi, seorang mahasiswa jurusan Teknik Informatika dari salah satu perguruan swasta di Purwokerto. Saya berumur 20 tahun untuk saat ini dan berasal dari Kabupaten Pekalongan, Jawa Tengah.
-				Saya tertarik dan fokus pada bidang machine learning, cyber security, serta sistem operasi linux. Saya orang yang mudah beradaptasi dengan
-				lingkungan baru, selalu memikirkan cara sederhana dalam menyelesaikan permasalahan, serta dapat bekerjasama dengan tim.
+		<div class="container-fl bg-red p-5 text-center">
+			<h3 class="fw-bold">About Me</h3>
+			<p class="mt-4 ">
+				Im undergratuated student which focus in data science, machine learning, and deep learning especially Natural Language Processing (NLP). Usually use python programming language with pandas, numpy, seaborn, matplotlib, sklearn, and tensorflow libraries for analyze, visualization, preprocessing, modeling, and deployment. Beside that, i have knowledge in cybersecurity and can use tools like kibana, wireshark, and networkminer for analyze network logs.
 			</p>
 		</div>
 		<!-- Biodata -->
 		<div class="container rounded-3 p-5 mt-5">
 			<div class="row">
-				<div class="col-sm-7">
+				<div class="col-sm-7 justify-content-center">
 					<h3 class="fw-bold text-center">Biodata</h3>
 					<p class="mt-4">
-						<ul>
-							<li>Nama: Widi Afandi</li>
-							<li>Domisili: Pekalongan, Jawa Tengah</li>
-							<li>Umur: 20 tahun</li>
-							<li>Jenis Kelamin: Laki-Laki</li>
-							<li>
-								Pendidikan:
-								<ul>
-									<li>Teknik Komputer dan Jaringan (2016-2019)</li>
-									<li>Teknik Informatika (2019-Sekarang)</li>
-								</ul> 
-							</li>
-						</ul>
+						<table class="table table-borderless">
+							<tr>
+								<td>Name</td>
+								<td>:</td>
+								<td>Widi Afandi</td>
+							</tr>
+							<tr>
+								<td>Address</td>
+								<td>:</td>
+								<td>Pekalongan Regency, Central Java</td>
+							</tr>
+							<tr>
+								<td>Age</td>
+								<td>:</td>
+								<td>21 years old</td>
+							</tr>
+							<tr>
+								<td>Gender</td>
+								<td>:</td>
+								<td>Male</td>
+							</tr>
+							<tr>
+								<td>Educations</td>
+								<td>:</td>
+								<td>
+									<ol>
+										<li>Computer and Network Engineering (2016-2019)</li>
+										<li>Informatics Engineering (2019-Now)</li>
+									</ol> 
+								</td>
+							</tr>
+							<tr>
+								<td>Achievements</td>
+								<td>:</td>
+								<td>
+									<ol>
+										<li>Get Funding in The Student Creativity Program (PKM-KC), Jun 2022</li>
+										<li>The Winner of Orbit Habibie Techfest (AI Competitions) - Dec, 2021</li>
+										<li>Top 20 Finalist GEMASTIK XIII (Cyber Security) - Sep, 2020</li>
+										<li>3rd Place of Best Graduate at SMKN 1 Sragi - May, 2019</li>
+									</ol> 
+								</td>
+							</tr>
+						</table>
 					</p>
 				</div>
-				<div class="col-sm text-center">
-					<img src="{{ url_for('static', filename='assets/img/foto1.png') }}" style="Width: 70%;">
+				<div class="col-sm text-center align-items-center justify-content-center">
+					<img src="{{ url_for('static', filename='assets/img/widi-afandi.png') }}" style="Width: 95%;">
 				</div>
 			</div>
 		</div>
 		<!-- Skill -->
-		<div class="container mt-5 bg-cyan p-5 rounded-corners justify-content-center">
-			<h3 class="fw-bold text-center">Skill</h3>
+		<div class="container-fl mt-5 bg-cyan p-5 justify-content-center">
+			<h3 class="fw-bold text-center">Tools</h3>
 			<p class="mt-4">
-				<div class="row row-cols-2 row-cols-sm-5 g-4">
+				<div class="row row-cols-3 row-cols-sm-5 g-4">
 				{% for i in skill %}
 				<!-- skill -->
 				<div class="col text-center">
@@ -119,7 +148,7 @@
 		<!-- Portofolio -->
 		<div class="container rounded-3 p-5 mt-5">
 			<div class="col-sm">
-				<h3 class="fw-bold text-center">Portofolio</h3>
+				<h3 class="fw-bold text-center">Project</h3>
 				<p class="mt-4">
 					<div class="row row-cols-1 row-cols-sm-3 g-4">
 					{% for i in porto %}
