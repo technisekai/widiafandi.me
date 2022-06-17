@@ -36,6 +36,3 @@ def page(path):
     path = path.replace('_', ' ')
     path = path.title()
     return render_template('page.html', nav_link = nav_link, page=page, judul=path)
-
-if __name__ == '__main__':
-	app.run(debug=True)
