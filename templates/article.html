@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="px-8 pt-32 md:px-20 mb-14">
+    <div class="grid mx-auto mb-8 md:grid-cols-2">
+        <!-- image random article -->
+        <div class="mx-auto mb-10 md:justify-self-end md:mr-10">
+            <img src="https://picsum.photos/600/400?random=1" class="rounded-lg w-92">
+        </div>
+        <div class="my-auto justify-self-center">
+            <!-- title article -->
+            <h1 class="mb-4 text-4xl">{{ article.title }}</h1>
+            <!-- author and date of article -->
+            <i class="mr-2 fa-solid fa-user text-blue-1"></i>{{ article.author }} <i class="ml-6 mr-2 fa-solid fa-calendar text-blue-1"></i> {{ article.date }}
+        </div>
+    </div>
+    <!-- content article -->
+    <div class="mx-auto font-normal tracking-wide md:text-lg lg:w-7/12" id="article">
+        {{ article.html|safe }}
+    </div>
+</section>
+{% endblock %}

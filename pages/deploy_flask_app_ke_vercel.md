@@ -45,7 +45,7 @@ Install vercel pada terminal atau cmd. disini saya menggunakan npm untuk install
 ### **6. Buat script vercel.json**
 Buatlah file berformat .json dan isi dengan code berikut. Untuk src dan dest sesuaikan dengan nama file pythonnya. Kemudian save pada folder root project
 <pre>
-	<code class="language-javascript fs-6">
+	<code class="language-javascript">
 		{
 			"version": 2,
 			"builds": [
@@ -84,9 +84,8 @@ Kemudian bisa diikuti seperti gambar dibawah
 
 *Untuk "What’s the name of your existing project?" bisa disesuakan dengan nama web temen-temen misal mau nama web
 makanankhas ya ganti aja dengan itu*
-<p align="center">
-  <img src="{{ url_for('static', filename='assets/img/artikel/deploy-flask-app-ke-vercel/step-7.png') }}" width="60%" align="tcenter">
-</p>
+<figure><img src="{{ url_for('static', filename='assets/images/articles-image/deploy_flask_app_vercel/step-7.png') }}" class="mx-auto mt-2 md:w-4/5 sm:w-96"><figcaption class="text-sm font-bold text-center lg:text-base">Fig 1 - Konfigurasi sebelum deploy</figcaption></figure>
 
+**Special thanks to:** 
 
-**Thanks to:** <a href="https://dev.to/andrewbaisden/how-to-deploy-a-python-flask-app-to-vercel-2o5k" target="_blank">dev.to</a>
+1. [**dev.to**](https://dev.to/andrewbaisden/how-to-deploy-a-python-flask-app-to-vercel-2o5k)

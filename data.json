@@ -1,0 +1,82 @@
+{
+    "social_media": {
+        "gmail": {
+            "icon": "fa-solid fa-envelope",
+            "link": "mailto:widiafandi58@gmail.com"
+        },
+        "linkedin": {
+            "icon": "fa-brands fa-linkedin-in",
+            "link": "https://www.linkedin.com/in/widi-afandi-9347211b6/"
+        },
+        "github": {
+            "icon": "fa-brands fa-github",
+            "link": "https://github.com/technisekai"
+        },
+        "telegram": {
+            "icon": "fa-brands fa-telegram",
+            "link": "https://t.me/fandi_57"
+        }
+    },
+
+    "about": {
+        "name": {
+            "icon": "fa-solid fa-user",
+            "value": "Widi Afandi"
+        },
+        "address": {
+            "icon": "fa-solid fa-location-dot",
+            "value": "Pekalongan Regency, Central Java"
+        },
+        "age": {
+            "icon": "fa-solid fa-cake-candles",
+            "value": "21 years old"
+        },
+        "gender": {
+            "icon": "fa-solid fa-mars",
+            "value": "Male"
+        }
+    },
+    
+    "projects": {
+        "1": {
+            "title": "Employees Feedback Analysis with Deep Learning",
+            "desc": "This project will ask user to upload a video about his review to his office. Use face-recognition and speech-recognition for detect employee face and extract speech the convert to texts. Then, use BERT model to analysis and classify the text into angry, happy, sadness, fear, and love emotion.",
+            "link": {
+                "web": "",
+                "github": "https://github.com/technisekai/employee-feedbacks-analysis"
+            }
+        },
+        "2": {
+            "title": "Dek Buha: Bullying and Hatespeech Detection",
+            "desc": "This project is use machine learning for detec hatespeech or cyberbullying and implement it to flask. Use indonesian twitter hatespeech comment and indonesian instagram cyberbullying comment dataset and provide above 80% accuracy in train or test with RNN-LSTM model.",
+            "link": {
+                "web": "http://dek-buha.herokuapp.com/",
+                "github": ""
+            }
+        },
+        "3": {
+            "title": "Registration Apps of New Students at National High School",
+            "desc": "The purpose of this application is make it easy for students who will continue their education at the National Vocational School. This application provides information about the National Vocational School, ranging from general information and information on each major in the National Vocational School.",
+            "link": {
+                "web": "",
+                "github": "https://github.com/technisekai/ppdb-smk-nasional"
+            }
+        },
+        "4": {
+            "title": "Projects using Flask",
+            "desc": "A blog and covid information made with flask. You can also create an article with markdown in blog version and in covid information it beside show positive, negative, and death in center java because covid, it can make you as contributors to input data covid at your regency in central java.",
+            "link": {
+                "web": "",
+                "github": "https://github.com/technisekai/flask-project"
+            }
+        },
+        "5": {
+            "title": "Notebook Collections",
+            "desc": "Notebook collections about data preprocessing, data visualization, data analyst, and modeling.",
+            "link": {
+                "web": "",
+                "github": "https://github.com/technisekai/orbit-future-academy-km"
+            }
+        }
+    }
+}

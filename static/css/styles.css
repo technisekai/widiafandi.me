@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&family=Maven+Pro&family=Righteous&family=Signika+Negative:wght@600&display=swap');
+
+h1 {
+    font-family: 'Signika Negative';
+}
+.text-logo {
+    font-family: 'Righteous';
+}
+.text-body {
+    font-family: 'PT Sans';
+}
+.text-nav {
+    font-family: 'Maven Pro';
+}
+.text-white-0 {
+    color: #F9F7F7;
+}
+.bg-white-0 {
+    background-color: #F9F7F7;
+}
+.text-blue-0 {
+    color: #00C1D4;
+}
+.bg-blue-0 {
+    background-color: #00C1D4;
+}
+.text-blue-1 {
+    color: #3F72AF;
+}
+.bg-blue-1 {
+    background-color: #3F72AF;
+}
+.text-blue-2 {
+    color: #112D4E;
+}
+.bg-blue-2 {
+    background-color: #112D4E;
+}
+.input-cursor {
+    display: inline-block;
+    width: 22px;
+    height: 4px;
+    background-color: white;
+    margin-left: 8px;
+    animation: blink .6s linear infinite alternate;
+}
+.disabled {
+    pointer-events: none;
+    cursor: default;
+}
+
+
+#article p {
+    margin-bottom: 1em;
+}
+#article ol {
+    list-style: decimal;
+    list-style-position: inside;
+}
+#article ul {
+    list-style: disc;
+    list-style-position: inside;
+}
+#article li {
+    margin-bottom: 0.4em;
+}
+#article li ul {
+    margin-left: 1.5em;
+}
+#article a {
+    color: blue;
+    text-decoration: underline;
+}
+
+
+@keyframes blink {
+    0% {opacity: 1;}
+    40% {opacity: 1;}
+    60% {opacity: 0;}
+    100% {opacity: 0;}
+}

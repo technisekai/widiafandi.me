@@ -125,7 +125,7 @@ pre[class*="language-"] {
 }
 
 pre[data-line] {
-	position: relative;
+	position: static;
 	padding: 1em 0 1em 3em;
 }
 
@@ -196,13 +196,13 @@ pre[id].linkable-line-numbers span.line-numbers-rows > span:hover:before {
 }
 
 pre[class*="language-"].line-numbers {
-	position: relative;
+	position: static;
 	padding-left: 3.8em;
 	counter-reset: linenumber;
 }
 
 pre[class*="language-"].line-numbers > code {
-	position: relative;
+	position: static;
 	white-space: inherit;
 }
 
@@ -236,40 +236,7 @@ pre[class*="language-"].line-numbers > code {
 			text-align: right;
 		}
 
-.token.tab:not(:empty),
-.token.cr,
-.token.lf,
-.token.space {
-	position: relative;
-}
 
-.token.tab:not(:empty):before,
-.token.cr:before,
-.token.lf:before,
-.token.space:before {
-	color: #808080;
-	opacity: 0.6;
-	position: absolute;
-}
-
-.token.tab:not(:empty):before {
-	content: '\21E5';
-}
-
-.token.cr:before {
-	content: '\240D';
-}
-
-.token.crlf:before {
-	content: '\240D\240A';
-}
-.token.lf:before {
-	content: '\240A';
-}
-
-.token.space:before {
-	content: '\00B7';
-}
 
 .token a {
 	color: inherit;
@@ -286,7 +253,7 @@ pre[class*="language-"] a[href]:hover {
 	text-decoration: underline;
 }
 div.code-toolbar {
-	position: relative;
+	position: static;
 }
 
 div.code-toolbar > .toolbar {
@@ -716,7 +683,7 @@ pre > code.diff-highlight .token.inserted:not(.prefix) {
 }
 
 .token.treeview-part .entry-line {
-	position: relative;
+	position: static;
 	text-indent: -99em;
 	display: inline-block;
 	vertical-align: top;
@@ -745,7 +712,7 @@ pre > code.diff-highlight .token.inserted:not(.prefix) {
 	border-bottom: 1px solid #ccc;
 }
 .token.treeview-part .entry-name {
-	position: relative;
+	position: static;
 	display: inline-block;
 	vertical-align: top;
 }
