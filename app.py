@@ -38,8 +38,7 @@ def blog():
 @app.route('/blogs/<path:path>.html')
 def article(path):
     article = articles.get_or_404(path)
-    path = path.replace('_', ' ')
-    return render_template('article.html', article=article, title=path)
+    return render_template('article.html', article=article, title='article')
 
 if __name__ == '__main__':
 	app.run(debug=True)

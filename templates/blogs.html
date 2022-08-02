@@ -8,15 +8,15 @@
         </h1>
         <div class="grid lg:grid-cols-3 md:grid-cols-2 md:gap-4">
             <!-- show card articles -->
-            {% for i in range(sum_articles) %}
-                <div class="container mx-auto max-w-sm bg-[url('https://picsum.photos/1600/900?random={{ i+1 }}')] rounded-lg shadow-md mb-10">
+            {% for article in articles %}
+                <div class="container mx-auto max-w-sm bg-[url('{{ article.image }}')] rounded-lg shadow-md mb-10">
                     <div class="h-full p-6 rounded-lg bg-black/50">
                         <!-- title article -->
-                        <h5 class="mb-4 text-2xl font-bold tracking-tight text-white">{{ articles[i].title }}</h5>
+                        <h5 class="mb-4 text-2xl font-bold tracking-tight text-white">{{ article.title }}</h5>
                         <!-- description article -->
-                        <p class="mb-6 font-normal text-gray-200">{{ articles[i].description }}</p>
+                        <p class="mb-6 font-normal text-gray-200">{{ article.description }}</p>
                         <!-- link article -->
-                        <a href="{{ articles[i].path }}.html" class="px-3 py-2 my-auto text-center text-white align-bottom bg-green-800 rounded-full shadow-md hover:bg-cyan-700">
+                        <a href="{{ article.path }}.html" class="px-3 py-2 my-auto text-center text-white align-bottom bg-green-800 rounded-full shadow-md hover:bg-cyan-700">
                             Read more
                         </a>
                     </div>

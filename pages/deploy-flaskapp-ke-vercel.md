@@ -2,6 +2,7 @@ title: Deploy Flask App ke Hosting Vercel
 author: Widi Afandi
 description: Deploy flask ke hosting vercel
 date: August 11, 2021
+image: https://picsum.photos/id/1018/600/400
 tags:
   - Flask
  

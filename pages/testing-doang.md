@@ -2,7 +2,7 @@ title: Lorem ipsum dolor sit amet.
 author: Widi Afandi
 description: This is a testing of the post
 date: March 19, 2020
-cover: Lorem ipsum dolor sit amet.jpg
+image: https://picsum.photos/id/103/600/400
 tags:
   - lain
   
