@@ -18,7 +18,7 @@
 </head>
 <body class="bg-white text-body text-blue-2">
   <!-- navbar -->
-  <nav class="fixed w-full {% if title.lower() != 'home' %} text-blue-1 bg-white shadow-lg {% else %} text-white {% endif %}" id="navbar">
+  <nav class="fixed w-full {% if title.lower() != 'home' %} text-blue-1 bg-white shadow-sm {% else %} text-white {% endif %}" id="navbar">
     <!-- text logo -->
     <div class="container flex flex-wrap items-center justify-between px-6 py-3 mx-auto md:px-20">
       <a href="{{ url_for('home')}}" class="text-center lg:w-0 md:w-full">
