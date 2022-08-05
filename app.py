@@ -29,12 +29,14 @@ with open('data.json', 'r', encoding='utf-8') as f:
 @app.route('/')
 def home():
 	return render_template('index.html', data=data, title="Home")
-# blogs page
+# blogs 
+## fix route soon
 @app.route('/artikel/')    
 def blog():
 	sum_articles = len(sorted_pages)
 	return render_template('blogs.html', sum_articles=sum_articles, articles=sorted_pages, title="Blogs")
 # article page
+## fix route soon
 @app.route('/artikel/<path:path>.html')
 def article(path):
     article = articles.get_or_404(path)
