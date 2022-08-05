@@ -35,7 +35,7 @@ def blog():
 	sum_articles = len(sorted_pages)
 	return render_template('blogs.html', sum_articles=sum_articles, articles=sorted_pages, title="Blogs")
 # article page
-@app.route('/blogs/<path:path>.html')
+@app.route('/artikel/<path:path>.html')
 def article(path):
     article = articles.get_or_404(path)
     return render_template('article.html', article=article, title=article.meta['title'])
