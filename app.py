@@ -30,7 +30,7 @@ with open('data.json', 'r', encoding='utf-8') as f:
 def home():
 	return render_template('index.html', data=data, title="Home")
 # blogs page
-@app.route('/blogs/')    
+@app.route('/artikel/')    
 def blog():
 	sum_articles = len(sorted_pages)
 	return render_template('blogs.html', sum_articles=sum_articles, articles=sorted_pages, title="Blogs")
