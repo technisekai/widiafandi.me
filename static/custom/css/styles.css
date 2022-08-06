@@ -49,8 +49,8 @@ h1 {
     cursor: default;
 }
 #article p {
-    margin-bottom: 1em;
-    margin-top: 0.7em;
+    margin-top: 0.8em;
+    margin-bottom: 0.2em;
     line-height: 1.7em;
 }
 #article h2 {
@@ -71,7 +71,7 @@ h1 {
     list-style-position: inside;
 }
 #article li {
-    margin-bottom: 0.4em;
+    margin-top: 0.4em;
 }
 #article li ul {
     margin-left: 1.5em;
