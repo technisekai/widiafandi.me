@@ -51,6 +51,10 @@ h1 {
 #article p {
     margin-bottom: 1em;
 }
+#article h2 {
+    font-weight: bolder;
+    font-size: larger;
+}
 #article ol {
     list-style: decimal;
     list-style-position: inside;
