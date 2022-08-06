@@ -48,8 +48,6 @@ h1 {
     pointer-events: none;
     cursor: default;
 }
-
-
 #article p {
     margin-bottom: 1em;
 }
@@ -71,8 +69,6 @@ h1 {
     color: blue;
     text-decoration: underline;
 }
-
-
 @keyframes blink {
     0% {opacity: 1;}
     40% {opacity: 1;}
