@@ -10,13 +10,13 @@
             <!-- title article -->
             <h1 class="mb-4 text-4xl">{{ article.title }}</h1>
             <!-- author and date of article -->
-            <p class="sm:text-sm md:text-base">
+            <p class="text-base">
                 <i class="mr-2 fa-solid fa-user text-blue-1"></i>{{ article.author }} <i class="ml-6 mr-2 fa-solid fa-calendar text-blue-1"></i> {{ article.date }}
             </p>
         </div>
     </div>
     <!-- content article -->
-    <div class="mx-auto font-normal tracking-wide md:text-lg lg:w-7/12" id="article">
+    <div class="mx-auto text-base font-normal tracking-wide md:text-lg lg:w-7/12" id="article">
         {{ article.html|safe }}
     </div>
 </section>
