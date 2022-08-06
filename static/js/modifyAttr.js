@@ -1,4 +1,4 @@
-const attr = ['bg-white', 'text-blue-1', 'shadow-lg']
+const attr = ['bg-white', 'text-blue-1']
 // remove attribut
 function removeAttr(attr) {
   document.getElementById('navbar').classList.remove(attr);
@@ -16,5 +16,6 @@ function btnChangeColor() {
   attr.forEach(removeAttr);
   removeAttr('text-white');
   toggleAttr('rounded-b-[20px]');
+  toggleAttr('shadow-lg');
   attr.forEach(toggleAttr);
 }
