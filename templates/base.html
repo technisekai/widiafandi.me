@@ -7,7 +7,7 @@
   <!-- favicon icon -->
   <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/favicon_io/favicon.ico') }}">
   <!-- custom css -->
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='custom/css/styles.css') }}">
   <!-- tailwinds css -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- prism CSS -->
@@ -108,11 +108,11 @@
 <!-- prism js for syntax highlight -->
 <script src="{{ url_for('static', filename='prism/js/prism.js') }}"></script>
 <!-- modify attribute -->
-<script src="{{ url_for('static', filename='js/modifyAttr.js') }}"></script>
+<script src="{{ url_for('static', filename='custom/js/modifyAttr.js') }}"></script>
 <!-- run this script if in index -->
 {% if title.lower() == 'home' %}
   <!-- typing animation -->
-  <script src="{{ url_for('static', filename='js/typingAnimation.js') }}"></script>
+  <script src="{{ url_for('static', filename='custom/js/typingAnimation.js') }}"></script>
   <!-- scroll behaviour -->
   <script>
     document.addEventListener("DOMContentLoaded", function(){
