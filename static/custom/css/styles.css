@@ -49,19 +49,35 @@ h1 {
     pointer-events: none;
     cursor: default;
 }
-#article p {
-    margin-top: 0.6em;
-    margin-bottom: 0.8em;
-    line-height: 1.7em;
+@keyframes blink {
+    0% {opacity: 1;}
+    40% {opacity: 1;}
+    60% {opacity: 0;}
+    100% {opacity: 0;}
 }
+
 #article h2 {
     font-weight: bolder;
-    font-size: 1.125em;
+    font-size: 1.25em;
+    line-height: 1.525em;
     margin-top: 2em;
 }
 #article h3 {
     font-weight: bolder;
+    font-size: 1.125em;
+    line-height: 1.7em;
     margin-top: 1.6em;
+}
+#article h4 {
+    font-weight: bolder;
+    font-size: 1em;
+    line-height: 1.7em;
+    margin-top: 1.2em;
+}
+#article p {
+    margin-top: 0.6em;
+    margin-bottom: 0.8em;
+    line-height: 1.7em;
 }
 #article ol {
     list-style: decimal;
@@ -81,9 +97,9 @@ h1 {
     color: blue;
     text-decoration: underline;
 }
-@keyframes blink {
-    0% {opacity: 1;}
-    40% {opacity: 1;}
-    60% {opacity: 0;}
-    100% {opacity: 0;}
+#article blockquote {
+    border-left: 0.375em solid #6b7280;
+    background-color: #f3f4f6;
+    font-size: 0.875em;
+    padding: 0.35em;
 }
