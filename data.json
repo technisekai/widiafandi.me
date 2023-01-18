@@ -2,19 +2,23 @@
     "social_media": {
         "gmail": {
             "icon": "fa-solid fa-envelope",
-            "link": "mailto:widiafandi58@gmail.com"
+            "link": "mailto:widiafandi58@gmail.com",
+            "color": "red-600"
         },
         "linkedin": {
             "icon": "fa-brands fa-linkedin-in",
-            "link": "https://www.linkedin.com/in/widi-afandi-9347211b6/"
+            "link": "https://www.linkedin.com/in/widi-afandi-9347211b6/",
+            "color":"cyan-600"
         },
         "github": {
             "icon": "fa-brands fa-github",
-            "link": "https://github.com/technisekai"
+            "link": "https://github.com/technisekai",
+            "color":"slate-600"
         },
         "telegram": {
             "icon": "fa-brands fa-telegram",
-            "link": "https://t.me/fandi_57"
+            "link": "https://t.me/fandi_57",
+            "color":"sky-500"
         }
     },
 

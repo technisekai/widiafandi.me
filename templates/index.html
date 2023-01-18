@@ -1,183 +1,33 @@
 {% extends "base.html" %}
 {% block content %}
   <!-- landing page -->
-  <section id="home" class="w-full h-screen bg-center bg-cover bg-[url('{{ url_for('static', filename='assets/images/background-image.png') }}')] text-white md:px-20 px-6 mb-14">
-    <div class="flex grid h-screen grid-cols-4 md:grid-cols-2">
+  <section id="home" class="h-screen px-6 mx-auto md:w-3/4 font-title text-light md:px-20 mb-14">
+    <div class="flex grid h-screen m-auto lg:grid-cols-2">
+      <!-- intorduction -->
+      <div class="m-auto space-y-5 text-base">
+        <span class="text-xl">Hello, there<br>
+          I’m <span class="text-5xl font-bold">Widi Afandi 👋</span>
+        </span>
+        <p>a freshgraduate student of Informatics Engineering.</p>
+        <p>
+          I’m focus in field of data like <span class="font-bold">data science, machine learning,</span> and <span class="font-bold">deep learning.</span>
+          Ah and one more, I’m currently learn about mobile development using <span class="font-bold">Flutter Framework.</span>
+        </p>
+        <p>
+          Wanna see my curriculum vitae? click here
+        </p>
+      </div>
       <!-- social media -->
-      <div class="my-auto space-y-5 md:text-center text-blue-2">
+      <div class="mb-auto lg:my-auto lg:ml-auto">
+        <div class="grid grid-cols-4 text-center md:gap-10">
         {% for i in data['social_media'] %}
           <div>
-            <button class="w-12 h-12 my-auto text-2xl bg-white rounded-full md:h-14 md:w-14 hover:ring-8 ring-cyan-500/50">
-              <a class="{{ data['social_media'][i]['icon'] }}" href="{{ data['social_media'][i]['link'] }}" target="_blank"></a>
+            <button class="w-12 h-12 my-auto text-2xl bg-white rounded  hover:ring-8 ring-{{ data['social_media'][i]['color'] }}/50">
+              <a class="{{ data['social_media'][i]['icon'] }} text-{{ data['social_media'][i]['color'] }}" href="{{ data['social_media'][i]['link'] }}" target="_blank"></a>
             </button>
           </div>
         {% endfor %}
-      </div>
-      <!-- introduction -->
-      <div class="col-span-3 my-auto md:col-span-1 md:m-auto">
-        <p class="text-2xl font-semibold md:text-3xl">Hello, I’m</p>
-        <p class="text-5xl font-extrabold md:text-7xl text-blue-0">
-          <span id="feature-text"></span><span class="input-cursor"></span>
-        </p><br>
-        <p>
-          Undergratuated student which interest with 
-          <span class="font-bold">machine learning</span> and <span class="font-bold">deep learning</span><br>
-          especially <span class="font-bold">Natural Language Processing (NLP)</span>.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- about me -->
-  <section  id="aboutme" class="px-12 md:px-20 mb-14">
-    <h1 class="mb-10 text-4xl font-extrabold text-center">
-      <span class="fa-solid fa-meteor text-blue-1"></span> About Me
-    </h1>
-    <div class="grid lg:grid-cols-3">
-      <!-- cols 1 - image widi afandi-->
-      <div class="text-center">
-        <img class="inline mb-6 md:w-72 w-44 md:mr-4" src="{{ url_for('static', filename='assets/images/widi-afandi.png') }}">
-      </div>
-      <!-- cols/rows 2 -->
-      <div class="my-auto">
-        <ol>
-          {% for i in data['about'] %}
-            <br>
-            <li class="inline-flex ml-6 mb-14">            
-              <span class="flex items-center justify-center w-8 h-8 rounded-full bg-blue-1 ring-8">
-                <i class="{{ data['about'][i]['icon'] }} text-white"></i>
-              </span>
-              <h3 class="flex items-center mb-1 ml-4 text-lg">{{ data['about'][i]['value'] }}</h3>
-            </li>
-          {% endfor %}
-        </ol>
-      </div>
-      <!-- cols 3 -->
-      <div class="my-auto">
-        <ol>
-          <!-- educations -->                  
-          <li class="inline-flex ml-6 mb-14 ">
-            <span class="flex items-center justify-center w-8 h-8 rounded-full bg-blue-1 ring-8">
-              <i class="text-white fa-solid fa-graduation-cap"></i>
-            </span>
-            <h3 class="flex items-center mb-1 ml-4 text-lg">Informatics Engineering</h3>
-          </li><br>
-          <!-- curriculum vitae -->
-          <li class="inline-flex ml-6 mb-14">            
-            <span class="flex items-center justify-center w-8 h-8 bg-green-700 rounded-full ring-8 ring-green-200">
-              <i class="text-white fa-solid fa-file-pdf"></i>
-            </span>
-            <a href="https://drive.google.com/file/d/18ohFIu6TNoXAaED92k9qaUmfF8Zj7Egk/view?usp=sharing" target="_blank" class="flex items-center mb-1 ml-4 text-lg font-semibold text-gray-400 underline hover:text-blue-500">More about me...</a>
-          </li>
-        </ol>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Skills -->
-  <section  id="skills" class="px-12 md:px-20 mb-14 bg-blue-2 text-white-0">
-    <h1 class="pt-10 mb-12 text-4xl font-extrabold text-center">
-      <span class="text-red-500 fa-solid fa-fire-flame-curved"></span> Skills
-    </h1>
-    <div class="grid justify-center lg:grid-cols-4">
-      <!-- cols 1 -->
-      <div class="mx-auto md:col-start-2 md:mr-10">
-        <ol class="-ml-8 ">
-          <!-- modeling -->             
-          <li class="mb-14">            
-            <h3 class="flex items-center mb-1 ml-4 text-lg font-bold">
-              <span class="flex items-center justify-center w-8 h-8 mr-6 rounded bg-blue-0 ring-8 ring-cyan-500/50">
-                <i class="text-white fa-solid fa-brain"></i>
-              </span>
-              Modeling
-            </h3>
-            <ul class="mb-1 ml-20 text-base list-disc list-inside">
-              <li>BERT</li>
-              <li>Tensorflow</li>
-              <li>Scikit-learn</li>
-            </ul>
-          </li>     
-          <!-- data visualization -->             
-          <li class="mb-14">            
-            <h3 class="flex items-center mb-1 ml-4 text-lg font-bold">
-              <span class="flex items-center justify-center w-8 h-8 mr-6 rounded bg-blue-0 ring-8 ring-cyan-500/50">
-                <i class="text-white fa-solid fa-chart-column"></i>
-              </span>
-              Data Visualization
-            </h3>
-            <ul class="mb-1 ml-20 text-base list-disc list-inside">
-              <li>Tableau</li>
-              <li>Google Studio</li>
-              <li>Seaborn</li>
-              <li>Matplotlib</li>
-            </ul>
-          </li>
-        </ol>
-      </div>
-      <!-- cols 2 -->
-      <div class="md:mx-auto md:col-start-3">
-        <ol class="-ml-8 ">
-          <!-- data preprocessing -->             
-          <li class="ml-6 mb-14">            
-            <h3 class="flex items-center mb-1 ml-4 text-lg font-bold">
-              <span class="flex items-center justify-center w-8 h-8 mr-6 rounded bg-blue-0 ring-8 ring-cyan-500/50">
-                <i class="text-white fa-solid fa-microchip"></i>
-              </span>
-              Data Preprocessing
-            </h3>
-            <ul class="mb-1 ml-20 text-base list-disc list-inside">
-              <li>Pandas</li>
-              <li>Numpy</li>
-              <li>Feature Selection</li>
-            </ul>
-          </li>
-          <!-- web development -->             
-          <li class="ml-6 mb-14">            
-            <h3 class="flex items-center mb-1 ml-4 text-lg font-bold">
-              <span class="flex items-center justify-center w-8 h-8 mr-6 rounded bg-blue-0 ring-8 ring-cyan-500/50">
-                <i class="text-white fa-solid fa-globe"></i>
-              </span>
-              Web Development
-            </h3>
-            <ul class="mb-1 ml-20 text-base list-disc list-inside">
-              <li>CSS</li>
-              <li>Bootstrap</li>
-              <li>Tailwind</li>
-              <li>Flask</li>
-              <li>Laravel</li>
-            </ul>
-          </li>    
-        </ol>
-      </div>
-    </div>
-  </section>
-
-  <!-- projects -->
-  <section  id="projects" class="px-8 md:px-20 mb-14">
-    <h1 class="mb-10 text-4xl font-extrabold text-center">
-      <span class="fa-solid fa-diagram-project text-blue-1"></span> Projects
-    </h1>
-    <div class="grid lg:grid-cols-3 md:justify-center">
-      {% for i in data['projects'] %}
-      <div class="container max-w-sm p-6 mb-10 bg-white border border-gray-200 rounded-lg shadow-md">
-        <a href="#">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight">{{ data['projects'][i]['title'] }}</h5>
-        </a>
-        <p class="mb-3 font-normal text-gray-500">{{ data['projects'][i]['desc'] }}</p>
-        <a href="{{ data['projects'][i]['link']['github'] }}" target="_blank" class="inline-flex items-center py-1 px-2 text-center text-white {% if not (data['projects'][i]['link']['github']) %} disabled bg-gray-500 {% endif %} bg-blue-1 rounded-full shadow-md">
-          <span class="text-xl fa-brands fa-github"></span>
-        </a>
-        <a href="{{ data['projects'][i]['link']['web'] }}" target="_blank" class="inline-flex items-center py-1 px-2 text-center text-white {% if not (data['projects'][i]['link']['web']) %} disabled bg-gray-500 {% endif %} bg-blue-1 rounded-full shadow-md">
-          <span class="text-xl fa-solid fa-globe"></span>
-        </a>
-      </div>
-      {% endfor %}
-      <!-- to github repository -->
-      <div class="inline-flex items-center justify-center">
-        <span class="flex items-center justify-center w-8 h-8 bg-green-700 rounded-full ring-8 ring-green-200">
-          <i class="text-white fa-solid fa-arrow-right"></i>
-        </span>
-        <a href="https://github.com/technisekai?tab=repositories" target="_blank" class="flex items-center mb-1 ml-4 text-lg font-semibold text-gray-400 underline hover:text-blue-500">More about my projects...</a>
+        </div>
       </div>
     </div>
   </section>

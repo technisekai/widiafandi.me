@@ -16,44 +16,34 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css" crossorigin="anonymous">
   <title>{{ title }}</title>
 </head>
-<body class="bg-white text-body text-blue-2">
+<body class="bg-dark font-body text-light">
   <!-- navbar -->
-  <nav class="fixed w-full shadow-sm {% if title.lower() != 'home' %} text-blue-1 bg-white {% else %} text-white {% endif %}" id="navbar">
+  <nav class="fixed w-full bg-dark ">
     <!-- text logo -->
-    <div class="container flex flex-wrap items-center justify-between px-6 py-3 mx-auto md:px-20">
+    <div class="container flex flex-wrap items-center justify-between px-6 py-3 mx-auto md:w-3/4 md:px-20">
       <a href="{{ url_for('home')}}" class="text-center lg:w-0 md:w-full">
-        <span class="self-center text-4xl font-semibold text-logo whitespace-nowrap">wid<span class="text-blue-1">.</span></span>
+        <span class="self-center text-2xl font-bold font-logo whitespace-nowrap">./widi</span>
       </a>
       <!-- collapse menus -->
-      <button onclick="btnChangeColor()" id="btn-nav" data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-600 bg-transparent rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-default" aria-expanded="false">
+      <button id="btn-nav" data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-600 bg-transparent rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-default" aria-expanded="false">
         <span class="sr-only">Open main menu</span>
         <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
       </button>
       <!-- menu -->
       <div class="hidden w-full md:block md:w-auto md:mx-auto lg:mx-0" id="navbar-default">
-        <ul class="flex flex-col mt-4 text-nav md:flex-row md:space-x-12 md:mt-0 md:text-base md:font-medium">
+        <ul class="flex flex-col mt-4 font-body md:flex-row md:space-x-12 md:mt-0 md:text-base md:font-medium">
           <li>
-            <a href="{{ url_for('home') }}" class=" block py-3 pr-4 pl-3 text-center {% if title.lower() == 'home' %} text-blue-1 font-semibold underline decoration-4 underline-offset-8 animate-bounce {% else %} text-gray-400 hover:underline hover:decoration-4 hover:underline-offset-8 hover:decoration-[#3F72AF] {% endif %}" aria-current="page">Home</a>
-          </li>
-          {% if title.lower() == 'home' %}
-            <li>
-              <a href="#aboutme" class="block px-3 py-3 text-center text-gray-400 hover:underline hover:decoration-4 hover:underline-offset-8 hover:decoration-[#3F72AF]">About Me</a>
-            </li>
-            <li>
-              <a href="#skills" class="block px-3 py-3 text-center text-gray-400 hover:underline hover:decoration-4 hover:underline-offset-8 hover:decoration-[#3F72AF]">Skills</a>
-            </li>
-            <li>
-              <a href="#projects" class="block px-3 py-3 text-center text-gray-400 hover:underline hover:decoration-4 hover:underline-offset-8 hover:decoration-[#3F72AF]">Projects</a>
-            </li>
-          {% endif %}
+            <a href="{{ url_for('home') }}" class=" block py-3 pr-2 pl-2 text-center {% if title.lower() == 'home' %} text-cyan-400 font-bold underline decoration-3 underline-offset-[12px] {% else %} text-gray-400 hover:text-cyan-400 hover:font-bold {% endif %}" aria-current="page">Home</a>
+          </li>  
           <li>
-            <a href="{{ url_for('blog') }}" class="block py-3 pr-4 pl-3 text-center {% if title.lower() == 'blogs' %} text-blue-1 font-semibold underline decoration-4 underline-offset-8 animate-bounce {% else %} text-gray-400 hover:underline hover:decoration-4 hover:underline-offset-8 hover:decoration-[#3F72AF] {% endif %}">Blogs</a>
+            <a href="{{ url_for('projects') }}" class=" block py-3 pr-2 pl-2 text-center {% if title.lower() == 'projects' %} text-cyan-400 font-bold underline decoration-3 underline-offset-[12px] {% else %} text-gray-400 hover:text-cyan-400 hover:font-bold {% endif %}" aria-current="page">Projects</a>
           </li>
-          {% if title.lower() != 'home' and title.lower() != 'blogs' %}
-            <li>
-              <span class="block py-3 pl-3 pr-4 font-semibold text-center underline text-blue-1 decoration-4 underline-offset-8 animate-bounce">Read Article</a>
-            </li>
-          {% endif %}
+          <li>
+            <a href="{{ url_for('achievements') }}" class=" block py-3 pr-2 pl-2 text-center {% if title.lower() == 'achievements' %} text-cyan-400 font-bold underline decoration-3 underline-offset-[12px] {% else %} text-gray-400 hover:text-cyan-400 hover:font-bold {% endif %}" aria-current="page">Achievements</a>
+          </li>
+          <li>
+            <a href="{{ url_for('articles') }}" class=" block py-3 pr-2 pl-2 text-center {% if title.lower() == 'articles' %} text-cyan-400 font-bold underline decoration-3 underline-offset-[12px] {% else %} text-gray-400 hover:text-cyan-400 hover:font-bold {% endif %}" aria-current="page">Articles</a>
+          </li>                
         </ul>
       </div>
     </div>
@@ -61,44 +51,21 @@
   <!-- content -->
   {% block content %} {% endblock %}
   <!-- footer -->
-  <footer class="px-6 py-3 bg-blue-2 md:px-20">
-    <div class="my-10 md:flex md:justify-between">
-      <div class="md:mb-0">
-        <a href="https://widiafandi.me/" class="flex items-center">
-          <span class="self-center text-2xl font-semibold text-white whitespace-nowrap text-logo">Widi Afandi</span>
-        </a>
-      </div>
-      <div class="grid grid-cols-2 gap-32 my-10 md:my-0">
+  <footer class="px-6 py-3 mx-auto md:px-20 md:w-3/4">
+    <div class="m-auto my-4 border-gray-200">
+      <div class="my-10 text-sm text-center md:my-0">
         <!-- this site build with technology.. -->
-        <div>
-          <h2 class="mb-6 text-lg font-semibold text-white text-nav">Build with</h2>
-          <ul class="text-gray-400 text-gray-600">
-            <li class="mb-4">
-                <a href="https://flowbite.com/" class="hover:underline">Flowbite</a>
-            </li>
-            <li class="mb-4">
-                <a href="https://tailwindcss.com/" class="hover:underline">Tailwind CSS</a>
-            </li>
-            <li>
-              <a href="https://fontawesome.com/" class="hover:underline">Awesome Fonts</a>
-            </li>
-          </ul>
-        </div>
-        <!-- my social media.. -->
-        <div>
-          <h2 class="mb-6 text-lg font-semibold text-white">Follow me</h2>
-          <ul class="text-gray-400 text-gray-600">
-            <li class="mb-4">
-                <a href="https://github.com/technisekai" class="hover:underline ">Github</a>
-            </li>
-            <li>
-                <a href="https://www.linkedin.com/in/widi-afandi-9347211b6/" class="hover:underline">Linkedin</a>
-            </li>
-          </ul>
-        </div>
+        Build with 
+          <span class="font-bold">Flowbite</span> 
+          <span class="text-red-500">&#10084;</span> 
+          <span class="font-bold">Tailwind</span> 
+          <span class="text-red-500">&#10084;</span> 
+          <span class="font-bold">Flask</span>
+        <br>
+        2023 &copy; Widi Afandi
       </div>
     </div>
-    <hr class="mx-auto my-6 border-gray-200 border-gray-700 lg:my-8">
+    <hr class="mx-auto my-2 border-gray-700">
   </footer>
 </body>
 <!-- flowbite js -->
@@ -107,26 +74,4 @@
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 <!-- prism js for syntax highlight -->
 <script src="{{ url_for('static', filename='prism/js/prism.js') }}"></script>
-<!-- modify attribute -->
-<script src="{{ url_for('static', filename='custom/js/modifyAttr.js') }}"></script>
-<!-- run this script if in index -->
-{% if title.lower() == 'home' %}
-  <!-- typing animation -->
-  <script src="{{ url_for('static', filename='custom/js/typingAnimation.js') }}"></script>
-  <!-- scroll behaviour -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function(){
-  	window.addEventListener('scroll', function() {
-  	  if (window.scrollY > 10) {
-        nav_white();
-  	  }
-      else {
-        addAttr('text-white');
-        removeAttr('text-blue-1');
-        removeAttr('bg-white');
-  	  }
-  	});
-  });
-  </script>
-{% endif %}
 </html>

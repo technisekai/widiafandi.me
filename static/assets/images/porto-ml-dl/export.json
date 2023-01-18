@@ -1,0 +1,19 @@
+
+    {
+        "hatespeech-bully-detection": {
+            "name": "Hatespeech and Bullying Classification in WA Group Chat using RNN-LSTM",
+            "link": "https://github.com/technisekai/hatespeech-and-cyberbullying-detection.git"
+        },
+        "auto-sentiment-analys": {
+            "name": "Auto Sentiment Analyst using Machine Learning Algorithm",
+            "link": "https://github.com/technisekai/auto-sentiment-analysis.git"
+        },
+        "rice-disease-classify": {
+            "name": "Leaf Rice Disease Classification using Transfer Learning EfficientnetB3",
+            "link": "https://github.com/technisekai/leaf-rice-classification.git"
+        },
+        "employee-feedback-analys": {
+            "name": "Implementation of Face Recognition and BERT to Analysis Employee Feedbacks",
+            "link": "https://github.com/technisekai/employee-feedbacks-analysis.git"
+        }
+    }

@@ -1,42 +1,33 @@
 
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans&family=Maven+Pro&family=Righteous&family=Signika+Negative:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish&family=Poppins&family=Roboto+Mono:wght@500&display=swap');
 
-h1 {
-    font-family: 'Signika Negative';
+/* DARK THEME*/
+/* font */
+.font-logo {
+    font-family: 'Roboto Mono';
 }
-.text-logo {
-    font-family: 'Righteous';
+.font-title {
+    font-family: 'Poppins';
 }
-.text-body {
-    font-family: 'PT Sans';
+.font-body {
+    font-family: 'Mulish';
 }
-.text-nav {
-    font-family: 'Maven Pro';
+/* background */
+.bg-dark {
+    background-color: #082032;
 }
-.text-white-0 {
-    color: #F9F7F7;
+/* text color */
+.text-light {
+    color: #EFF5F5;
 }
-.bg-white-0 {
-    background-color: #F9F7F7;
+.text-nav-menus {
+    color: #D6E4E5;
 }
-.text-blue-0 {
-    color: #00C1D4;
+.text-dark {
+    color: #082032;
 }
-.bg-blue-0 {
-    background-color: #00C1D4;
-}
-.text-blue-1 {
-    color: #3F72AF;
-}
-.bg-blue-1 {
-    background-color: #3F72AF;
-}
-.text-blue-2 {
-    color: #112D4E;
-}
-.bg-blue-2 {
-    background-color: #112D4E;
-}
+
 .input-cursor {
     display: inline-block;
     width: 22px;
@@ -94,12 +85,12 @@ h1 {
     margin-left: 1.5em;
 }
 #article a {
-    color: blue;
+    color: #5BC0F8;
     text-decoration: underline;
 }
 #article blockquote {
     border-left: 0.375em solid #6b7280;
-    background-color: #f3f4f6;
+    background-color: #334756;
     font-size: 0.875em;
     padding: 0.35em;
 }

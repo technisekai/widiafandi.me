@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+    <!-- projects -->
+    <section id="projects" class="px-6 pt-32 mx-auto md:px-20 md:w-3/4 mb-14">
+        <!-- articles page -->
+        <div class="grid lg:grid-cols-3 md:grid-cols-2 md:gap-4">
+            <!-- show card articles -->
+            {% for article in articles %}
+                <div class="container max-w-sm mx-auto rounded-lg shadow-md bg-[#334756] mb-3 lg:mb-0">
+                    <div class="p-6 rounded-lg font-body">
+                        <!-- title article -->
+                        <h5 class="mb-4 text-xl font-semibold tracking-tight text-white text-start">{{ article.title }}</h5> 
+                        <!-- link article -->
+                        <a href="{{ article.path }}.html" class="p-2 my-auto font-semibold text-center rounded-lg shadow-md text-dark bg-cyan-400 hover:bg-cyan-700">
+                            read article &nbsp; <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}

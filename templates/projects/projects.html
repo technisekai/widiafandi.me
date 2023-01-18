@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block content %}
+  <!-- tableau portofolio section -->
+  <section id="projects" class="px-6 pt-32 mx-auto md:px-20 md:w-3/4 mb-14">
+    <section id="tableau-visz" class="mb-14">
+      <h1 class="mb-2 text-2xl font-bold text-center font-title text-start">> Visualization with Tableau</h1>
+      <div class="grid lg:grid-cols-3 md:grid-cols-2 md:gap-4">
+        <!-- show card porto tableau -->
+        {% for visz in projects[0] %}
+          <div class="container mx-auto mb-3 rounded-lg lg:mb-0">
+            <img src="{{ url_for('static', filename='assets/images/porto-tableau/'+projects[0][visz]['img']) }}" class="mb-4 rounded-lg">
+            <a href="{{ projects[0][visz]['link'] }}" target="_blank" class="p-2 text-base font-semibold rounded-lg hover:bg-cyan-700 bg-cyan-400 text-dark">
+              view dashboard
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+    </section>
+
+    <!-- ml-dl portofolio section -->
+    <section id="ml-dl-deployment" class="mb-14">
+      <h1 class="mb-2 text-2xl font-bold text-center font-title text-start">> ML and DL Deployment to Web</h1>
+      <!-- show card porto ml-dl -->
+      <div class="grid lg:grid-cols-3 md:grid-cols-2 md:gap-4">
+        {% for ml_dl in projects[1] %}
+          <div class="container max-w-sm mx-auto mb-3 lg:mb-0 rounded-lg shadow-md bg-[#334756] font-body">
+            <div class="p-6 rounded-lg ">
+                <h5 class="mb-4 text-lg font-semibold tracking-tight text-white text-start">{{ projects[1][ml_dl]['name'] }}</h5> 
+                <a href="{{ projects[1][ml_dl]['link'] }}" class="p-2 my-auto font-semibold text-center rounded-lg shadow-md text-dark bg-cyan-400 hover:bg-cyan-700">
+                    view repo &nbsp; <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </section>
+
+    <!-- flutter portofolio section -->
+    <section id="flutter-apps" class="mb-14">
+      <h1 class="mb-2 text-2xl font-bold text-center font-title text-start">> Flutter Apps</h1>
+      <div class="grid lg:grid-cols-3 md:grid-cols-2 md:gap-4">
+        {% for flutter in projects[2] %}
+          <div class="container max-w-sm mb-3 lg:mb-0 mx-auto rounded-lg shadow-md bg-[#334756] font-body">
+            <div class="p-6 rounded-lg ">
+                <h5 class="mb-4 text-lg font-semibold tracking-tight text-white text-start">{{ projects[2][flutter]['name'] }}</h5> 
+                <a href="{{ projects[2][flutter]['link'] }}" class="p-2 my-auto font-semibold text-center rounded-lg shadow-md text-dark bg-cyan-400 hover:bg-cyan-700">
+                    view repo &nbsp; <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </section>
+  </section>
+{% endblock %}

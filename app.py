@@ -9,7 +9,7 @@ import json
 app = Flask(__name__)
 app.config['FLATPAGES_EXTENSION'] = '.md'
 # for markdown files
-articles = FlatPages(app)
+ARTICLES = FlatPages(app)
 
 # render markdown
 def prerender_jinja(text):
@@ -19,7 +19,7 @@ def prerender_jinja(text):
 app.config['FLATPAGES_HTML_RENDERER'] = prerender_jinja
 
 # articles
-posts = [p for p in articles if "date" in p.meta]
+posts = [p for p in ARTICLES if "date" in p.meta]
 sorted_pages = sorted(posts, reverse=True, key=lambda page: datetime.strptime(page.meta["date"], "%B %d, %Y")) # sort articles by date
 # json data about myself
 with open('data.json', 'r', encoding='utf-8') as f:
@@ -29,16 +29,34 @@ with open('data.json', 'r', encoding='utf-8') as f:
 @app.route('/')
 def home():
 	return render_template('index.html', data=data, title="Home")
-# blogs 
-@app.route('/blog/')    
-def blog():
+
+# projects 
+@app.route('/projects/')    
+def projects():
+	# json data about my projects
+	projects = ['porto-tableau', 'porto-ml-dl', 'porto-flutter']
+	get_projects = []
+	for project in projects:
+		with open('static/assets/images/'+project+'/export.json', 'r', encoding='utf-8') as f:
+			get_projects.append(json.load(f))
+	return render_template('projects/projects.html', projects=get_projects, title="Projects")
+
+# achievements 
+@app.route('/achievements/')    
+def achievements():
+	return render_template('achievements.html', title="Achievements")
+
+# artciles 
+@app.route('/articles/')    
+def articles():
 	sum_articles = len(sorted_pages)
-	return render_template('blogs.html', sum_articles=sum_articles, articles=sorted_pages, title="Blogs")
+	return render_template('articles/articles.html', sum_articles=sum_articles, articles=sorted_pages, title="Articles")
+
 # article page
-@app.route('/blog/<path:path>.html')
+@app.route('/articles/<path:path>.html')
 def article(path):
-    article = articles.get_or_404(path)
-    return render_template('article.html', article=article, title=article.meta['title'])
+    article = ARTICLES.get_or_404(path)
+    return render_template('articles/article.html', article=article, title=article.meta['title'])
 
 if __name__ == '__main__':
 	app.run(debug=True)
