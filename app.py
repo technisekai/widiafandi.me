@@ -8,6 +8,7 @@ import json
 # flask conf
 app = Flask(__name__)
 app.config['FLATPAGES_EXTENSION'] = '.md'
+app.jinja_env.globals['datetime'] = datetime
 # for markdown files
 ARTICLES = FlatPages(app)
 
