@@ -9,7 +9,7 @@
   <!-- custom css -->
   <link rel="stylesheet" href="{{ url_for('static', filename='custom/css/styles.css') }}">
   <!-- tailwinds css -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='custom/css/tailwind_out.css') }}">
   <!-- prism CSS -->
   <link href="{{ url_for('static', filename='prism/css/prism.css') }}" rel="stylesheet" />
   <!-- awesome font -->
@@ -62,7 +62,7 @@
           <span class="text-red-500">&#10084;</span> 
           <span class="font-bold">Flask</span>
         <br>
-        2023 &copy; Widi Afandi
+        {{ datetime.now().year }} &copy; Widi Afandi
       </div>
     </div>
     <hr class="mx-auto my-2 border-gray-700">
